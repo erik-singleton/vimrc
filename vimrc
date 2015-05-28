@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Color schemes
 Plugin 'croaker/mustang-vim'
@@ -28,13 +29,14 @@ filetype plugin indent on
 syntax on
 set shell=/bin/sh
 set t_Co=256
-set guifont=Inconsolata\ 12
+set guifont=Inconsolata\ for\ Powerline\ 12
 set nu
 set showmatch
 set smarttab
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set encoding=utf-8
 
 set ignorecase
 set smartcase
@@ -44,6 +46,7 @@ set incsearch
 colorscheme mustang
 
 map <leader>t :NERDTreeToggle<CR>
+map <C-b> :NERDTreeFind<CR>
 map g> :bnext!<CR>
 map g< :bprev!<CR>
 
@@ -51,11 +54,11 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
 
 vmap "+y :!xclip -f -sel clip
 map "+p :r!xclip -o -sel clip
