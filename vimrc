@@ -52,6 +52,8 @@ set smartcase
 set hlsearch
 set incsearch
 
+au BufRead,BufNewFile *.html set filetype=html.mustache syntax=mustache
+
 colorscheme mustang
 
 map <leader>t :NERDTreeToggle<CR>
