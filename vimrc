@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
+Plugin 'digitaltoad/vim-jade'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
@@ -60,7 +61,8 @@ set incsearch
 au BufRead,BufNewFile *.html set filetype=html.mustache syntax=mustache
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
 
-colorscheme mustang
+let g:alduin_Shout_Windhelm=1
+colorscheme alduin
 
 " Buffer keymap
 nnoremap g> :bnext!<CR>
@@ -85,6 +87,7 @@ nnoremap <C-b> :NERDTreeFind<CR><C-w>l
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = "node_modules"
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
